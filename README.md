@@ -26,7 +26,7 @@ Exemples de blocks/composants/animations entièrement développés par mes soins
 
 ## [Cover home](https://github.com/idrissdiakite/anyos/tree/main/cover-home)
 
-![Screenshot](https://github.com/idrissdiakite/anyos/tree/main/cover-home/screenshot.png)
+![Screenshot](https://github.com/idrissdiakite/anyos/blob/main/cover-home/screenshot.png)
 
 **Description** 
 
@@ -42,7 +42,7 @@ Exemples de blocks/composants/animations entièrement développés par mes soins
 
 ## [Featured text](https://github.com/idrissdiakite/anyos/tree/main/featured-text)
 
-![Screenshot](https://github.com/idrissdiakite/anyos/tree/main/featured-text/screenshot.png)
+![Screenshot](https://github.com/idrissdiakite/anyos/blob/main/featured-text/screenshot.png)
 
 **Description** 
 
@@ -50,7 +50,7 @@ Exemples de blocks/composants/animations entièrement développés par mes soins
 
 ## [Map](https://github.com/idrissdiakite/anyos/tree/main/map)
 
-![Screenshot](https://github.com/idrissdiakite/anyos/tree/main/map/screenshot.png)
+![Screenshot](https://github.com/idrissdiakite/anyos/blob/main/map/screenshot.png)
 
 **Description** 
 
@@ -58,7 +58,7 @@ Exemples de blocks/composants/animations entièrement développés par mes soins
 
 ## [Modal/Timeline](https://github.com/idrissdiakite/anyos/tree/main/modal-timeline)
 
-![Screenshot](https://github.com/idrissdiakite/anyos/tree/main/modal-timeline/screenshot.png)
+![Screenshot](https://github.com/idrissdiakite/anyos/blob/main/modal-timeline/screenshot.png)
 
 **Description** 
 
