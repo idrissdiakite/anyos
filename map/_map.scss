@@ -1,0 +1,82 @@
+@use "../config" as *;
+
+.b-map {
+  padding: 7rem 2rem 8rem;
+
+  @include media-breakpoint-up(md) { padding: 7rem 4rem 8rem; }
+
+  @include media-breakpoint-up(lg) { padding: 18.9rem 0 17.2rem; }
+
+  .row {
+    display: flex;
+    align-items: flex-end;
+
+    @include media-breakpoint-up(lg) { align-items: flex-start; }
+  }
+
+  &__title {
+    margin-bottom: 3rem;
+
+    @include media-breakpoint-up(md) { width: 70%; }
+
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+      margin-bottom: 6rem;
+    }
+  }
+
+  &__city {
+    font-size: 2rem;
+    width: 100%;
+    padding: 2rem 8vw;
+    background: top left / contain no-repeat url("../images/svg/bg-city.svg");
+
+    @include suptitle;
+
+    @include media-breakpoint-up(lg) { padding: 2rem 4.16vw; }
+
+    &--content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.5s $ease-out;
+
+      ul {
+        margin-top: 2rem !important;
+
+        li {
+          opacity: 1 !important;
+
+          &::before { transition: all 0.75s $ease-out; }
+
+          @media (hover: hover) {
+            &:hover {
+              a { background-position: 0%; }
+            }
+          }
+
+          a {
+            text-decoration: none;
+            display: block;
+            position: relative;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-size: 200% 100%;
+            background-position: 100%;
+            background-image: linear-gradient(to right, $white, $white 50%, $primary 50%);
+            transition: all 1.25s $ease-out;
+            cursor: pointer;
+          }
+        }
+      }
+    }
+  }
+
+  &__image {
+    padding: 4rem 2rem 2rem;
+
+    @include media-breakpoint-up(md) { padding: 4rem 15rem 2rem; }
+
+    @include media-breakpoint-up(lg) { padding: 0; }
+  }
+}

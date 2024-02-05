@@ -1,0 +1,221 @@
+@use "../config" as *;
+
+.c-modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  opacity: 0;
+  height: 100%;
+  background: rgba(59, 61, 61, 0.2);
+  backdrop-filter: blur(15px);
+  pointer-events: none;
+  z-index: $z-header + 1;
+
+  @include media-breakpoint-up(md) { padding: 80px calc(8.33333vw + 5px); }
+
+  @include media-breakpoint-up(lg) { padding: 6vh 12.85vw; }
+
+  @include media-breakpoint-up(xl) { height: 100vh; }
+
+  &__wrapper {
+    height: 100%;
+    background: $green-light;
+    transform-origin: center center;
+
+    @include media-breakpoint-up(md) { border-radius: 20px; }
+  }
+
+  &__cross {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+
+    @include media-breakpoint-up(lg) {
+      top: 3rem;
+      right: 3rem;
+      width: 45px;
+      height: 45px;
+    }
+  }
+
+  &__content {
+    padding: 5rem 10vw 0 16.66vw;
+    height: 100%;
+    overflow-x: hidden;
+    position: relative;
+
+    @include media-breakpoint-up(lg) { padding: 10rem 16.66vw 0; }
+  }
+
+  &__items--wrapper { position: relative; }
+
+  &__timeline {
+    position: absolute;
+    top: 2rem;
+    left: -3.5rem;
+    width: 5px;
+
+    &.back {
+      height: 100%;
+      background: $grey-light;
+      z-index: 0;
+    }
+
+    &.front {
+      height: 0;
+      z-index: 1;
+      background: #f4943c;
+    }
+
+    span {
+      display: none;
+      position: absolute;
+      bottom: 20px;
+      left: -3.5px;
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      border: 3px solid $green-light;
+      background: $grey-light;
+
+      &:first-of-type { bottom: -1px; }
+
+      &:last-of-type { bottom: 40px; }
+    }
+  }
+
+  &__items { position: relative; }
+
+  &__item {
+    &:not(:first-of-type) { margin-top: 5.9rem; }
+
+    .c-modal__item--date,
+    .c-modal__bullet,
+    .c-modal__item--title,
+    .c-modal__item--image,
+    .c-modal__item--text p {
+      opacity: 0;
+      transform: translateX(100%);
+      transition: all 1.5s $ease-out;
+      overflow: hidden;
+
+      &.in-view {
+        opacity: 1;
+        transform: translateX(0);
+      }
+    }
+
+    &--date,
+    &--text {
+      position: relative;
+
+      span {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        border-radius: 50%;
+        border: 3px solid $green-light;
+        background: $grey-light;
+        z-index: 2;
+
+        &.active {
+          border: 3px solid $white;
+          background: $secondary;
+        }
+      }
+    }
+
+    &--date {
+      margin-bottom: 1.4rem;
+      font-family: $font-secondary;
+
+      @include count-slider;
+
+      span {
+        left: -4rem;
+        width: 16px;
+        height: 16px;
+      }
+    }
+
+    &--title { margin-bottom: 4rem; }
+
+    &--text {
+      margin-bottom: 2rem;
+
+      span {
+        left: -3.8rem;
+        width: 12px;
+        height: 12px;
+      }
+    }
+
+    &--image {
+      margin-bottom: 3rem;
+
+      img {
+        width: 90%;
+        height: 25vh;
+        border-radius: 20px;
+
+        @include media-breakpoint-up(lg) {
+          width: 70%;
+          height: 40vh;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    width: 100vw;
+    margin-top: 20rem;
+    margin-left: -16vw;
+    position: relative;
+
+    @include media-breakpoint-up(md) { margin-left: -25vw; }
+
+    @include media-breakpoint-up(lg) {
+      width: 57.6vw;
+      margin-top: 8rem;
+      margin-left: -8.3vw;
+    }
+
+    &--shape {
+      @include media-breakpoint-down(lg) { display: none; }
+    }
+
+    &--content {
+      margin-bottom: 10rem;
+
+      @include media-breakpoint-up(md) { margin-bottom: 15rem; }
+
+      @include media-breakpoint-up(lg) {
+        position: absolute;
+        top: 35%;
+        left: 12%;
+        margin-bottom: 0;
+      }
+    }
+
+    &--title {
+      text-align: center;
+      width: 100%;
+      margin: 0 auto 3rem;
+
+      @include media-breakpoint-up(md) { width: 50%; }
+
+      @include media-breakpoint-up(lg) { width: 60%; }
+    }
+
+    &--link {
+      margin-top: 3rem;
+
+      .e-button { margin: 0 auto; }
+    }
+  }
+}

@@ -1,0 +1,42 @@
+@use "../config" as *;
+
+.b-history {
+  position: relative;
+  padding-bottom: 0;
+  z-index: $z-header + 1;
+
+  &__wrapper {
+    height: 60vh;
+    background: $dark;
+    border-radius: 20px;
+    margin: 0 auto;
+    width: calc(100vw - 4rem);
+
+    @include media-breakpoint-up(md) {
+      height: 50vh;
+      width: calc(100vw - 8rem);
+    }
+
+    @include media-breakpoint-up(lg) {
+      width: 100%;
+      margin: 0;
+      height: 40vh;
+    }
+
+    @include media-breakpoint-up(xl) { height: 80vh; }
+  }
+
+  &__image {
+    width: 180%;
+
+    @include media-breakpoint-up(lg) { width: 100%; }
+
+    img { height: 300%; }
+  }
+
+  &__title { text-align: center; }
+
+  &__button { margin: 3rem auto 0; }
+
+  .e-button { cursor: pointer; }
+}

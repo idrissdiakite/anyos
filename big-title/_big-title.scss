@@ -1,0 +1,37 @@
+@use "../config" as *;
+
+.b-big-title {
+  height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+
+  &__title {
+    width: 100%;
+    margin: 0 auto;
+    margin-bottom: 4rem;
+
+    @include marquee;
+
+    @include media-breakpoint-up(lg) { padding: 0 10rem; }
+  }
+
+  &__icon {
+    width: max-content;
+    margin: 0 auto;
+
+    svg {
+      path { fill: $primary; }
+    }
+
+    span {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 10%;
+      height: 36px;
+      background: $primary;
+      border-radius: 6px;
+    }
+  }
+}
