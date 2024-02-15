@@ -6,7 +6,7 @@ Thème wordpress sur-mesure développé au sein de l'agence Digital Cover.
 
 À partir d'une maquette (Figma) réalisé par le directeur artistique, j'ai été en charge de tout le reste: mise en place du back-office (wordpress), intégration de la maquette, développement, animations, recettage, mises en ligne (preprod et prod) etc... Seule la page produit n'a pas été réalisée par mes soins. 
 
-Contrairement à d'autres projets (exemple [Quodagis](https://github.com/idrissdiakite/quodagis)), je n'ai eu que très peu (pour ne pas dire pas du tout) de liberté concernant l'ux et les animations. À noter également, qu'initialement le site était nettement plus agréable, fluide et performant. En effet, et sans rentrer dans les détails, une fois le site developpé il a fallu réadapter la quasi intégralité des blocs ainsi qu'en refaire certains pour coller au nouveau contenu du client.
+Contrairement à d'autres projets (exemple [Quodagis](https://github.com/idrissdiakite/quodagis)), je n'ai eu que très peu (pour ne pas dire pas du tout) de liberté concernant l'ux et les animations. À noter également, qu'initialement le site était nettement plus agréable visuellement, fluide et performant (bien que les maquettes aient été validées avec un contenu définitif, il a fallu après coup réadapter la quasi intégralité des blocs ainsi qu'en refaire certains pour coller au nouveau contenu du client).
 
 ## ⚙ Stack(s)
 
